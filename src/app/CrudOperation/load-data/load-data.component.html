@@ -1,0 +1,24 @@
+<div class="container-fluid">
+    <h2>Load all data</h2>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Username</th>
+            <th scope="col">Website</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody class="table-group-divider">
+          <tr *ngFor="let user of gdata; let i = index">
+            <th scope="row">{{i+1}}</th>
+            <td>{{user.name}}</td>
+            <td>{{user.username}}</td>
+            <td>{{user.website}}</td>
+            <td><button type="button" class="btn btn-outline-secondary"><i class="fa fa-pencil" ></i></button> | <button type="button" class="btn btn-outline-danger" (click)="GetrecordID(user.name)"><i class="fa fa-trash-o" ></i></button></td>
+          </tr>
+        
+        </tbody>
+      </table>
+</div>
